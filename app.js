@@ -3,8 +3,10 @@ var txtInput = document.querySelector("#txt-input");
 var outputDiv = document.querySelector("#output");
 
 
+
 function getTranslationURL(text){
     return "https://api.openweathermap.org/data/2.5/weather?q=" + text + "&APPID=2b17d5a956eb1b02dcf3663da14bad12"
+
 
 
 }
@@ -23,6 +25,7 @@ function clickHandler() {
         .then(response => response.json())
         .then(json => {
             var translatedText = json.main.temp - 273;
+            var weather = json.weather.description;
             var emoji;
             if(translatedText <=5 ){
                 emoji = "🌨️"
