@@ -5,7 +5,7 @@ var apiKey = "62a7b93cbb4d4940b9f124421202911";
 
 
 function getTranslationURL(text){
-    return "http://api.weatherapi.com/v1/current.json?key=" + apiKey + "&q=" + text
+    return "https://api.weatherapi.com/v1/current.json?key=" + apiKey + "&q=" + text
 
 
 }
