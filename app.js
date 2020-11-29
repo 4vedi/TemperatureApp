@@ -1,6 +1,7 @@
 var btnTranslate = document.querySelector("#btn-translate");
 var txtInput = document.querySelector("#txt-input");
-var outputDiv = document.querySelector("#output");
+var output1Div = document.querySelector("#output");
+var output2Div = document.querySelector("#weather");
 
 
 
@@ -39,7 +40,8 @@ function clickHandler() {
                 emoji = "☀️"
             }
             var weather = json.weather[0]["description"];
-            outputDiv.innerText = translatedText.toFixed(0) + "°C" + " " + "Weather Condition:" + weather + " " + emoji;
+            output1Div.innerText = translatedText.toFixed(0) + "°C" + emoji;
+            output2Div.innerText = "Weather Condition: " + weather;
            })
         .catch(errorHandler)
 };
