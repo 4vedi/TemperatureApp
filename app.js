@@ -1,11 +1,10 @@
 var btnTranslate = document.querySelector("#btn-translate");
 var txtInput = document.querySelector("#txt-input");
 var outputDiv = document.querySelector("#output");
-var apiKey = "62a7b93cbb4d4940b9f124421202911";
 
 
 function getTranslationURL(text){
-    return "https://api.weatherapi.com/v1/current.json?key=" + apiKey + "&q=" + text
+    return "https://api.openweathermap.org/data/2.5/weather?q=" + text + "&APPID=2b17d5a956eb1b02dcf3663da14bad12"
 
 
 }
@@ -23,7 +22,7 @@ function clickHandler() {
     fetch(getTranslationURL(inputText))
         .then(response => response.json())
         .then(json => {
-            var translatedText = json.current.temp_c;
+            var translatedText = json.main.temp - 273;
             var emoji;
             if(translatedText <=5 ){
                 emoji = "🌨️"
