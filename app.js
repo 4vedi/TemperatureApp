@@ -25,7 +25,6 @@ function clickHandler() {
         .then(response => response.json())
         .then(json => {
             var translatedText = json.main.temp - 273;
-            var weather = json.weather.description;
             var emoji;
             if(translatedText <=5 ){
                 emoji = "🌨️"
@@ -39,7 +38,8 @@ function clickHandler() {
             else{
                 emoji = "☀️"
             }
-            outputDiv.innerText = translatedText.toFixed(0) + "°C" + " " + emoji; // output
+            var weather = json.weather[0]["description"];
+            outputDiv.innerText = translatedText.toFixed(0) + "°C" + " " + "Weather Condition:" + weather + " " + emoji;
            })
         .catch(errorHandler)
 };
