@@ -39,7 +39,7 @@ function clickHandler() {
             else{
                 emoji = "☀️"
             }
-            outputDiv.innerText = translatedText + "°C" + " " + emoji; // output
+            outputDiv.innerText = translatedText.toFixed(0) + "°C" + " " + emoji; // output
            })
         .catch(errorHandler)
 };
