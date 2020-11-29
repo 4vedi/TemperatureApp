@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <style>
+        :root {
+        --primary: #374151;
+        --black: #333333;
+        --width-break: 600px;
+
+        }       
+        body{
+            margin: 0;
+            font-family: 'Kalam', cursive;
+            color: #818CF8 ;
+            display: block;
+            background: url('./image/23284.jpg');
+            background-attachment:fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        .container{
+            padding: 0rem 1rem;
+        }
+        .navtitle{
+            font-size: 2rem;
+            padding: 1rem;
+
+        }
+        .navigation{
+
+            background-color: var(--primary);
+            text-align: center;
+            height: 10vh;
+            padding: 1 rem;
+            font-size: 2rem;
+        }
+        main{
+            margin: auto;
+            padding: 1rem;
+            max-width: var(--width-break);
+        }
+        textarea{
+            margin: 5px;
+            box-sizing: border-box;
+            display: block;
+            width: 50%;
+            min-height: 10vh;
+            margin-top: 2rem;
+            font-size: large;
+            font-family: inherit;
+        }
+        #btn-translate{
+            margin: 5px;
+            padding: 1.5rem;
+            background-color: var(--primary);
+            border-radius: 1rem;
+            width: 120px;
+            
+            
+        }
+
+        #output{
+            
+            width: 550px;
+            height: 100px;
+            padding: 1rem;
+            font-size: 55px;
+            margin: 1rem 0rem;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class = "navigation container">
+        <div class = "navtitle">What's the Temperature!</div>
+    </nav>
+    <main>
+    <textarea id="txt-input" placeholder="Enter the city name"></textarea>
+    <button id = "btn-translate">Find</button>
+    <div>Temperature will come here 👇 </div>
+    <div id="output"></div>
+    </main>
+<script src="/Users/yashchaturvedi/Desktop/Desktop /programming/webdev/weatherapp/app.js"  type="text/javascript"></script>    
+</body>
+</html>
