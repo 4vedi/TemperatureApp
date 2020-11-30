@@ -41,7 +41,7 @@ function clickHandler() {
             }
             var weather = json.weather[0]["description"];
             output1Div.innerText = translatedText.toFixed(0) + "°C" + emoji;
-            output2Div.innerText = "Weather Condition: " + weather;
+            output2Div.innerText = "Weather: " + weather;
            })
         .catch(errorHandler)
 };
